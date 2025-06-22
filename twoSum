@@ -1,0 +1,11 @@
+def twoSum(self, nums, target):
+
+    cache = {}
+    for i in range(len(nums)):
+        num = nums[i]
+        compliment = target - num
+        if compliment in cache:
+            return [cache[compliment],i]
+        cache[num] = i
+    
+    return []
